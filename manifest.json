@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Disable YouTube Ambient Mode",
+    "description": "Removes the high-GPU load due to the new YouTube ambient mode",
+    "version": "0.1.0",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["script.js"],
+            "run_at": "document_idle",
+            "matches": ["*://*.youtube.com/*"]
+        }
+    ]
+}
